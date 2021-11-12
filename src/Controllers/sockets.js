@@ -13,6 +13,11 @@ let socket = function(io){
         socket.on('disconnect', () => {
             console.log('user disconnected');
         });
+
+        //Evento de controller
+        socket.on("contoller",(data)=>{
+            console.log(data);
+        })
     });
 }
 module.exports = socket;
